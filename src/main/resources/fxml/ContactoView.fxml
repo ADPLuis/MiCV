@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<SplitPane fx:id="contactoView" dividerPositions="0.5, 0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <items>
+      <BorderPane fx:id="telefonoBP">
+         <center>
+            <TableView fx:id="telefonoTableView">
+              <columns>
+                <TableColumn fx:id="telefonoNumero" prefWidth="137.0" text="Numero" />
+                <TableColumn fx:id="telefonoTipo" prefWidth="133.0" text="Tipo" />
+              </columns>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </BorderPane.margin>
+            </TableView>
+         </center>
+         <right>
+            <VBox fx:id="telefonoBotonera" spacing="5.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="telefonoAnadirButton" mnemonicParsing="false" onAction="#onTelefonoAnadirButton" prefHeight="25.0" prefWidth="60.0" text="Añadir">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="telefonoEliminarButton" mnemonicParsing="false" onAction="#onTelefonoEliminarButton" text="Eliminar" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <BorderPane.margin>
+                  <Insets left="5.0" />
+               </BorderPane.margin>
+            </VBox>
+         </right>
+         <top>
+            <TitledPane fx:id="telefonoTitle" animated="false" collapsible="false" expanded="false" text="Teléfonos" BorderPane.alignment="CENTER" />
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="correosBP">
+         <center>
+            <TableView fx:id="correosTableView">
+              <columns>
+                <TableColumn fx:id="correosEmail" prefWidth="310.0" text="Email" />
+              </columns>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </BorderPane.margin>
+            </TableView>
+         </center>
+         <top>
+            <TitledPane fx:id="correosTitle" animated="false" collapsible="false" expanded="false" text="Direcciones de correo" BorderPane.alignment="CENTER">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </TitledPane>
+         </top>
+         <right>
+            <VBox fx:id="correosBotonera" spacing="5.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="correosAnadirButton" mnemonicParsing="false" onAction="#onCorreosAnadirButton" prefHeight="25.0" prefWidth="60.0" text="Añadir">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="correosEliminarButton" mnemonicParsing="false" onAction="#onCorreosEliminarButton" text="Eliminar" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <BorderPane.margin>
+                  <Insets left="5.0" />
+               </BorderPane.margin>
+            </VBox>
+         </right>
+      </BorderPane>
+      <BorderPane fx:id="webBP">
+         <center>
+            <TableView fx:id="webTableView">
+              <columns>
+                <TableColumn fx:id="webURL" prefWidth="312.0" text="URL" />
+              </columns>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </BorderPane.margin>
+            </TableView>
+         </center>
+         <top>
+            <TitledPane fx:id="webTitle" animated="false" collapsible="false" expanded="false" text="Webs" BorderPane.alignment="CENTER">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </TitledPane>
+         </top>
+         <right>
+            <VBox fx:id="webBotonera" spacing="5.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="webAnadirButton" mnemonicParsing="false" onAction="#onWebAnadirButton" prefHeight="25.0" prefWidth="60.0" text="Añadir">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="webEliminarButton" mnemonicParsing="false" onAction="#onWebEliminarButton" text="Eliminar" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <BorderPane.margin>
+                  <Insets left="5.0" />
+               </BorderPane.margin>
+            </VBox>
+         </right>
+      </BorderPane>
+   </items>
+</SplitPane>

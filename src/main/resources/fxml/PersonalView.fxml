@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="personalView" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <GridPane fx:id="personalGrid" alignment="CENTER" prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="dniLabel" text="DNI/NIE/Pasaporte" />
+            <Label fx:id="nombreLabel" text="Nombre" GridPane.rowIndex="1" />
+            <Label fx:id="apellidosLabel" text="Apellidos" GridPane.rowIndex="2" />
+            <Label fx:id="nacimientoLabel" text="Fecha de nacimiento" GridPane.rowIndex="3" />
+            <Label fx:id="direccionLabel" text="Dirección" GridPane.rowIndex="4" />
+            <Label fx:id="codigopostalLabel" text="Código Postal" GridPane.rowIndex="6" />
+            <Label fx:id="localidadLabel" text="Localidad" GridPane.rowIndex="7" />
+            <Label fx:id="paisLabel" text="Pais" GridPane.rowIndex="8" />
+            <ListView fx:id="nacionalidadesList" prefHeight="130.0" prefWidth="298.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="9" GridPane.rowSpan="2" />
+            <Label fx:id="nacionalidadLabel" text="Nacionalidad" GridPane.rowIndex="9" />
+            <VBox fx:id="personalBotonera" fillWidth="false" prefHeight="129.0" prefWidth="42.0" spacing="5.0" GridPane.columnIndex="3" GridPane.rowIndex="9" GridPane.rowSpan="2">
+               <children>
+                  <Button fx:id="agregarButton" mnemonicParsing="false" onAction="#onAgregarNacionalidadButton" text="+" />
+                  <Button fx:id="quitarButton" mnemonicParsing="false" onAction="#onQuitarNacionalidadButton" prefHeight="25.0" prefWidth="25.0" text="-" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+            <TextField fx:id="dniTextfield" GridPane.columnIndex="1" GridPane.columnSpan="3" />
+            <TextField fx:id="apellidosTextfield" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2" />
+            <DatePicker fx:id="fechaPicker" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+            <TextField fx:id="localidadTextfield" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="7" />
+            <TextField fx:id="direccionTextfield" alignment="CENTER" prefHeight="53.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.rowSpan="2" GridPane.vgrow="ALWAYS" />
+            <TextField fx:id="codigopostalTextfield" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <ComboBox fx:id="paisCombo" prefWidth="150.0" promptText="Seleccione un país" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField fx:id="nombreTextfield" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+</BorderPane>

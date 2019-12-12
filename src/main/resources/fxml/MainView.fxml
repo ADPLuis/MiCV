@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="view" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <MenuBar fx:id="menuBarMain" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu fx:id="archivoMenu" mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem fx:id="nuevoItem" mnemonicParsing="false" onAction="#onNuevoItemButton" text="Nuevo" />
+                  <MenuItem fx:id="abrirItem" mnemonicParsing="false" onAction="#onAbrirItemButton" text="Abrir" />
+                  <MenuItem fx:id="guardarItem" mnemonicParsing="false" onAction="#onGuardarItemButton" text="Guardar" />
+                  <MenuItem fx:id="guardarComoItem" mnemonicParsing="false" onAction="#onGuardarComoItemButton" text="Guardar como..." />
+                  <MenuItem fx:id="salirItem" mnemonicParsing="false" onAction="#onSalirItemButton" text="Salir" />
+            </items>
+          </Menu>
+          <Menu fx:id="ayudaMenu" mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem fx:id="acercadeItem" mnemonicParsing="false" text="Acerca de..." />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TabPane fx:id="tabpanemain" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab fx:id="personalTab" closable="false" text="Personal">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab fx:id="contactoTab" closable="false" text="Contacto">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab fx:id="formacionTab" closable="false" text="Formación">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab fx:id="experienciaTab" closable="false" text="Experiencia">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab fx:id="conocimientosTab" closable="false" text="Conocimientos">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

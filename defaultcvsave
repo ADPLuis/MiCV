@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<curriculum>
+    <conocimientos/>
+    <contacto/>
+    <experiencia/>
+    <formacion/>
+    <personal>
+        <apellidosproperty>asdfasdf</apellidosproperty>
+        <codigopostalproperty>43535</codigopostalproperty>
+        <direccionproperty>sdfadf</direccionproperty>
+        <dniproperty>sdafasdf</dniproperty>
+        <fechaproperty>2019-12-12</fechaproperty>
+        <localidadproperty>423sdfs</localidadproperty>
+        <nacionalidadproperty>antiguano</nacionalidadproperty>
+        <nombreproperty>asdfasf</nombreproperty>
+        <paisproperty>Andorra</paisproperty>
+    </personal>
+</curriculum>
